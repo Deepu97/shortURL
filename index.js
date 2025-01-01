@@ -5,6 +5,7 @@ const {dbConnect}=require('./mongoconnection/mongoconnect');
 dbConnect("mongodb://localhost:27017/admin")
 const userrouter=require('./routes/route')
 const app=express();
+const port=process.env.PORT || 5000;
 app.use(cors());
 // app.use(express.urlencoded({extended:false}));
 app.use(express.json());
@@ -22,7 +23,7 @@ app.get('/:shortId',async(req,res)=>{
 //     const user=await model.find();
 //     res.end(`<h1>hello</h1>${user.map((ele)=>`<li>${ele}</li>`)} `)
 // })
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log("server starting.....");
     
     
