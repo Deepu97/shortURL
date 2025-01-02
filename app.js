@@ -2,7 +2,7 @@ const express=require('express');
 const model=require('./model/userModel');
 const cors=require('cors');
 const {dbConnect}=require('./mongoconnection/mongoconnect');
-dbConnect("mongodb://localhost:27017/admin")
+dbConnect(process.env.MongoDB);
 const userrouter=require('./routes/route')
 const app=express();
 const port=process.env.PORT || 5000;
