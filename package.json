@@ -1,4 +1,16 @@
 {
+  "name":"shortURL",
+  "version":"1.0.0",
+  "discription":"",
+  "main":"app.js",
+  "scripts":{
+    "start":"node app.js",
+    "dev":"node app.js"
+  },
+  "author":"",
+  "engines":{
+    "node":">=20.15.1"
+  }
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
